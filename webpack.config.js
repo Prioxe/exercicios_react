@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+
 module.exports = {
     entry: './ex/index.jsx',
     output: {
@@ -6,8 +7,11 @@ module.exports = {
         filename: './bundle.js'
     },
     devServer: {
-        port: 8083,
-        contentBase: '.public',
+        port: 8080,
+        contentBase: './public',
+    },
+    resolve: {
+        extensions: ['','.js','.jsx']
     },
     module:{
         loaders: [{
